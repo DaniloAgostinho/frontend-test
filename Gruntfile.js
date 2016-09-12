@@ -46,6 +46,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     //registro de tarefas
-    grunt.registerTask('build', [ 'cssmin', 'jshint', 'sass', 'imagemin']);
+    grunt.registerTask('b', [ 'cssmin', 'jshint', 'sass', 'imagemin']);
 
 };
