@@ -1,0 +1,230 @@
+@import '_includes/_variaveis.scss';
+@import '_includes/_mixis.scss';
+
+//fonte padrão
+@font-face {
+	font-family: "Montserrat";
+	src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+.active {background:$active;}
+
+body {
+	text-align: center;
+	background:$bg;
+	padding-bottom: 30px;
+}
+
+//estilos de 0px em diante
+@media screen and (min-width: 0px) {
+    //bloco geral da aplicação
+	#wrapper{
+		width: 340px;
+		height: auto;
+		margin: 15px auto;
+	}
+    //classe aplicada na logo
+	.max-width {
+		max-width: 180px;
+		z-index: 12;
+		position: relative;
+		right: 58px;
+		top: 4px;
+	}
+	//barra de titulo branca a direita: RANKING
+	.barra-raking{
+		background: $white;
+		width: 286px;
+		position: inherit;
+		height: 52px;
+		top: 110px;
+		z-index: -99999;
+		left: -76px;
+	    @include border-top-radius(3px);
+		@include border-left-radius(3px);
+		@include border-right-radius(3px);
+		@include border-bottom-radius(3px);
+	}
+     
+	.barra-raking h3 {
+	    font-family: $font-padrao;
+		text-transform: $caixaAlta;
+		font-weight: bold;
+		font-size: 28px;
+		line-height: 2;
+		letter-spacing: -2px;
+		text-align: $tRight;
+		margin-right: 45px;
+	}
+
+	#profiles-items {
+		width: 342px;
+		height: auto;	
+		margin-top: 10px;
+		background: $white;
+		@include border-top-radius(3px);
+		@include border-left-radius(3px);
+		@include border-right-radius(3px);
+		@include border-bottom-radius(3px);
+	}
+
+	.flot-img {
+	    width: 65px;
+	    height: 65px;
+	    float: $tLeft;
+		margin-right: 20px;
+		margin-left: -8px;
+	    border-radius: 65px;
+	    -webkit-border-radius: 65px;
+	    -moz-border-radius: 65px;
+	    -o-border-radius: 65px;
+	    cursor: pointer;
+	    border: 3px solid $bgHover;
+	    zoom: 1;
+	}
+
+	
+	.profile h4, p { text-align: $tLeft; font-family: 'Noto Sans', sans-serif; }
+
+	hgroup { width: 310px; height: 70px; }
+
+	.profile h4{
+	    font-size: 18px;
+	    font-family: $font-padrao;
+	    font-weight: normal;
+	    position: relative;
+	    top: 11px;
+	    font-weight: bold;
+	    color: #ba3638;
+	}
+
+	.profile p {
+	    font-family: "Myriad Pro";
+	    color: $colorP;
+	    font-size: 13px;
+	}
+
+	.profile {
+		    height: 95px;
+		    padding: 10px;
+		    position: relative;
+	   } 	
+
+	.profile:hover{
+		    background: $bgHover;
+		    color: #fff;
+		    cursor: pointer;
+	   } 	
+
+	   hgroup:hover h4 {
+	   	color: #fff;
+	   }	
+
+	.bullet {
+		width: 25px;
+		height: 25px;
+		background: $white;
+		border: 1px solid gray;
+		border-radius: 30px;
+		position: absolute;
+		left: 50px;
+		top: 47px;
+	}
+
+	.buller-number {
+		font-weight: 900;
+		font-family: "Myriad Pro";	
+		color: #707070;
+		position: relative;
+		top: 2px;
+	}
+	.setLeft {
+		position: absolute;
+		width: 11px;
+		height: 19px;
+		background: url("../img/set.png");
+		left: -5px;
+		top: -1px;
+		z-index: -9999999;
+
+	}
+	//tooltip
+	.tooltiptext {
+	    visibility: hidden;
+	    width: 180px;
+	    background-color: $white;
+	    color: $white;
+	    text-align: left;
+	    border-radius: 6px;
+	    height: 53px;
+	    border-top: 20px solid #ba3638;
+	    /* Position the tooltip */
+	    position: absolute;
+	    z-index: 99999999;
+	    top: 20px;
+	    left: 105%;
+	}
+
+
+	.profile:hover .tooltiptext {
+	    visibility: visible;
+	}
+
+	.tooltiptext h3 {
+		font-size: 20px;
+		color: #909090;
+		font-weight: 900;
+		font-family: "Arial";
+		line-height: 1;
+		position: relative;
+		bottom: 15px;
+		left: 6px;
+	}
+
+	.title-votacao {
+		position: absolute;
+		bottom: 50px;
+		width: 100px;
+		left: 5px;
+		text-transform: uppercase;
+		font-size: 11px;
+		letter-spacing: 1;
+		font-weight: bold;
+		font-family: $font-padrao;
+		text-align: left;
+	}
+
+
+	.line-right {
+		width: 2px;
+		height: 53px;
+		background: #251f1f;
+		float: $tLeft;
+		position: relative;
+		bottom: 20px;
+		border-right: 1px solid #280f0f;
+		left: 0px;
+		z-index: 20;
+		@include opacity(0.4);
+	}
+
+
+
+/*end media 0px*/
+}
+
+/*end media 320px*/
+@media screen and (max-width: 980px) {
+	.profile:hover .tooltiptext {
+	    display: none;
+	 }
+
+
+}
+
+
+@media screen and (min-width: 320px) {
+	body {
+		 overflow-x: hidden;
+	}
+}
